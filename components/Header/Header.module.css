@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 120px;
+  background-color: var(--inputs-color);
+  margin-bottom: 4px;
+}
+
+.headerline {
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.carSpan {
+  color: var(--blue-color);
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  
+}
+
+.link {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.linkText {
+  color: var(--dark-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.linkText:hover,
+.linkText:focus {
+  color: var(--blue-color);
+}

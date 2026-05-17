@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+}
+
+:root {
+  --blue-color: #3470ff;
+  --hover-color: #0b44cd;
+  --white-color: #ffffff;
+  --dark-color: #101828;
+  --gray-color: #475467;
+  --lightGray-color: #dadde1;
+  --darkGrau-color: #8d929a;
+  --inputs-color: #f7f7f7;
+
+  --main-font: var(--font-manrope), sans-serif;
+}

@@ -1,0 +1,149 @@
+.searchSection {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 84px;
+  margin-bottom: 56px;
+}
+
+.searchForm {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+
+.selectGroup,
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+  color: var(--darkGrau-color);
+}
+
+.dropdown {
+  position: relative;
+  width: 204px;
+}
+
+.dropdownButton {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--inputs-color);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 36px rgba(0, 0, 0, 0.08);
+  list-style: none;
+  z-index: 20;
+}
+
+.dropdownItem {
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--darkGrau-color);
+  cursor: pointer;
+  transition: color 250ms ease;
+}
+
+.dropdownItem:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.dropdownItem:hover {
+  color: var(--dark-color);
+}
+
+/* ICON */
+
+.icon {
+  fill: var(--dark-color);
+
+  transition: transform 250ms ease;
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+/* MILEAGE */
+
+.mileageInputs {
+  display: flex;
+}
+
+.mileageInput {
+  width: 160px;
+  height: 44px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  background-color: var(--inputs-color);
+
+  font-size: 16px;
+  font-weight: 500;
+
+  color: var(--dark-color);
+
+  outline: none;
+}
+
+.mileageInput:first-child {
+  border-right: 1px solid var(--lightGray-color);
+  border-radius: 12px 0 0 12px;
+}
+
+.mileageInput:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.mileageInput::placeholder {
+  color: var(--dark-color);
+}
+
+
+.button {
+  width: 156px;
+  height: 44px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--blue-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(  --white-color);
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+.button:hover {
+  background-color: var(--hover-color);
+}
