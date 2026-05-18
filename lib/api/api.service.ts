@@ -65,6 +65,7 @@ export async function createBookingRequest(carId:string,data: IBooking): Promise
       name: data.name,
       email: data.email,
       comment: data.comment,
+      bookingDate:data.bookingDate
     }
   );
   return res.data;
