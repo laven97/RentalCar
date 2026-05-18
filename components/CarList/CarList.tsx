@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 
 import css from "./CarList.module.css";
-
 import { Car } from "@/types/cars-type";
 
 interface CarListProps {
@@ -72,10 +71,7 @@ export default function CarList({ cars }: CarListProps) {
               </ul>
             </div>
 
-            <Link
-              href={`/cars/${car.id}`}
-              className={`${css.carButtonText} ${css.carCardButton}`}
-            >
+            <Link href={`/cars/${car.id}`} className={css.carCardButton}>
               Read more
             </Link>
           </div>

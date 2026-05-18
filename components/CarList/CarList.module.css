@@ -5,7 +5,6 @@
   gap: 48px 32px;
 }
 
-/* CARD */
 
 .carListCard {
   display: flex;
@@ -14,7 +13,6 @@
   width: 276px;
 }
 
-/* IMAGE */
 
 .carImg {
   position: relative;
@@ -41,7 +39,6 @@
   transform: scale(1.03);
 }
 
-/* LIKE BUTTON */
 
 .likeButton {
   position: absolute;
@@ -118,8 +115,6 @@
   color: var(--dark-color);
 }
 
-/* INFO */
-
 .carInformationList {
   display: flex;
   flex-direction: column;
@@ -176,6 +171,14 @@
   background-color: var(--blue-color);
   cursor: pointer;
   transition: background-color 250ms ease, transform 250ms ease;
+
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carCardButton:hover {

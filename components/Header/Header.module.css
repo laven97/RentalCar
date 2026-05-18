@@ -36,9 +36,6 @@
 
 .linkText:hover,
 .linkText:focus {
-  color: var(  --hover-color);
+  color: var( --hover-color);
 }
 
-.linkTextActive {
-  color: var(  --hover-color) ;
-}
