@@ -20,14 +20,10 @@ export default function CarsClient() {
   const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading } =
     useInfiniteQuery({
       queryKey: ["cars", search],
-
       queryFn: ({ pageParam = 1 }) => getCarList(pageParam, search),
-
       initialPageParam: 1,
-
       getNextPageParam: (lastPage, pages) => {
         const nextPage = pages.length + 1;
-
         return nextPage <= lastPage.totalPages ? nextPage : undefined;
       },
     });

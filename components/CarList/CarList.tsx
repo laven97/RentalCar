@@ -72,11 +72,12 @@ export default function CarList({ cars }: CarListProps) {
               </ul>
             </div>
 
-            <button className={css.carCardButton}>
-              <Link href={`/cars/${car.id}`} className={css.carButtonText}>
-                Read more
-              </Link>
-            </button>
+            <Link
+              href={`/cars/${car.id}`}
+              className={`${css.carButtonText} ${css.carCardButton}`}
+            >
+              Read more
+            </Link>
           </div>
         );
       })}

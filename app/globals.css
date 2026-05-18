@@ -13,6 +13,7 @@ body {
   --lightGray-color: #dadde1;
   --darkGrau-color: #8d929a;
   --inputs-color: #f7f7f7;
+  --header-color:#F2F4F7;
 
   --main-font: var(--font-manrope), sans-serif;
 }

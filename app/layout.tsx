@@ -1,6 +1,8 @@
+import { Metadata } from "next";
+import { Manrope } from "next/font/google";
+
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import "./globals.css";
-import { Manrope } from "next/font/google";
 import Header from "@/components/Header/Header";
 
 const manrope = Manrope({
@@ -9,6 +11,16 @@ const manrope = Manrope({
   variable: "--font-manrope",
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: "RentalCar",
+  description: "Looking for car,booking",
+  openGraph: {
+    title: "RentalCar",
+    description:
+      "Here you will able to pick car you want to rent or just look at the list of available cars",
+  },
+};
 
 export default function RootLayout({
   children,

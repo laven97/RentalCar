@@ -11,7 +11,9 @@ export default function HeroBaner() {
             Reliable and budget-friendly rentals for any journey
           </p>
         </div>
-        <button className={css.button}><Link href="/cars/filter/all" className={css.link}>View Catalog</Link></button>
+        <Link href="/cars/filter/all" className={`${css.link} ${css.button}`}>
+          View Catalog
+        </Link>
       </div>
     </section>
   );

@@ -18,11 +18,10 @@ export default async function CarsPage() {
     mileageTo: "",
   };
 
-  await queryClient.prefetchQuery({
-    queryKey: ["cars", 1, initialFilters],
-
-    queryFn: () =>
-      getCarList(1, initialFilters),
+  await queryClient.prefetchInfiniteQuery({
+    queryKey: ["cars", initialFilters],
+    queryFn: ({ pageParam = 1 }) => getCarList(pageParam, initialFilters),
+    initialPageParam: 1,
   });
 
   return (

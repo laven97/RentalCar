@@ -14,7 +14,7 @@ export default function CarDetailsView({ car }: CarDetailsViewProps) {
           <img src={car.img} alt={car.brand} />
         </div>
         <div className={css.bookYourCar}>
-          <CarForm />
+          <CarForm carId={car.id} />
         </div>
       </section>
 
@@ -45,26 +45,16 @@ export default function CarDetailsView({ car }: CarDetailsViewProps) {
 
         <div className={css.moreAboutCar}>
           <div className={css.title}>
-            <h3 className={css.headerline}>Rental Conditions: </h3>
+            <h3 className={css.headerline}>Rental Conditions:</h3>
             <ul className={css.list}>
-              <li className={css.itemsOfList}>
-                <svg width="16" height="16">
-                  <use href="/icons/icons.svg#group"></use>
-                </svg>
-                <p className={css.listText}>{car.rentalConditions?.[0]}</p>
-              </li>
-              <li className={css.itemsOfList}>
-                <svg width="16" height="16">
-                  <use href="/icons/icons.svg#group"></use>
-                </svg>
-                <p className={css.listText}>{car.rentalConditions?.[1]}</p>
-              </li>
-              <li className={css.itemsOfList}>
-                <svg width="16" height="16">
-                  <use href="/icons/icons.svg#group"></use>
-                </svg>
-                <p className={css.listText}>{car.rentalConditions?.[2]}</p>
-              </li>
+              {car.rentalConditions?.map((condition, index) => (
+                <li key={index} className={css.itemsOfList}>
+                  <svg width="16" height="16">
+                    <use href="/icons/icons.svg#group"></use>
+                  </svg>
+                  <p className={css.listText}>{condition}</p>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -103,42 +93,14 @@ export default function CarDetailsView({ car }: CarDetailsViewProps) {
           <div className={css.title}>
             <h3 className={css.headerline}>Accessories and functionalities:</h3>
             <ul className={css.list}>
-              <li className={css.itemsOfList}>
-                <svg width="16" height="16">
-                  <use href="/icons/icons.svg#group"></use>
-                </svg>
-                <p className={css.listText}>{car.features?.[0]}</p>
-              </li>
-              <li className={css.itemsOfList}>
-                <svg width="16" height="16">
-                  <use href="/icons/icons.svg#group"></use>
-                </svg>
-                <p className={css.listText}>{car.features?.[1]}</p>
-              </li>
-              <li className={css.itemsOfList}>
-                <svg width="16" height="16">
-                  <use href="/icons/icons.svg#group"></use>
-                </svg>
-                <p className={css.listText}>{car.features?.[2]}</p>
-              </li>
-              <li className={css.itemsOfList}>
-                <svg width="16" height="16">
-                  <use href="/icons/icons.svg#group"></use>
-                </svg>
-                <p className={css.listText}>{car.features?.[3]}</p>
-              </li>
-              <li className={css.itemsOfList}>
-                <svg width="16" height="16">
-                  <use href="/icons/icons.svg#group"></use>
-                </svg>
-                <p className={css.listText}>{car.features?.[4]}</p>
-              </li>
-              <li className={css.itemsOfList}>
-                <svg width="16" height="16">
-                  <use href="/icons/icons.svg#group"></use>
-                </svg>
-                <p className={css.listText}>{car.features?.[5]}</p>
-              </li>
+              {car.features?.map((feature, index) => (
+                <li key={index} className={css.itemsOfList}>
+                  <svg width="16" height="16">
+                    <use href="/icons/icons.svg#group"></use>
+                  </svg>
+                  <p className={css.listText}>{feature}</p>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

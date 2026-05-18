@@ -1,7 +1,6 @@
 .searchSection {
   display: flex;
   justify-content: center;
-
   margin-top: 84px;
   margin-bottom: 56px;
 }
@@ -58,7 +57,7 @@
   overflow-y: auto;
   padding: 14px 18px;
   border-radius: 12px;
-  background-color: var(--white-color);
+  background-color: var(--inputs-color);
   box-shadow: 0 4px 36px rgba(0, 0, 0, 0.08);
   list-style: none;
   z-index: 20;
@@ -80,11 +79,9 @@
   color: var(--dark-color);
 }
 
-/* ICON */
 
 .icon {
   fill: var(--dark-color);
-
   transition: transform 250ms ease;
 }
 
@@ -92,7 +89,7 @@
   transform: rotate(180deg);
 }
 
-/* MILEAGE */
+
 
 .mileageInputs {
   display: flex;

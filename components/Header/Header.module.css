@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 120px;
-  background-color: var(--inputs-color);
+  background-color: var(--header-color);
   margin-bottom: 4px;
 }
 
@@ -36,5 +36,9 @@
 
 .linkText:hover,
 .linkText:focus {
-  color: var(--blue-color);
+  color: var(  --hover-color);
+}
+
+.linkTextActive {
+  color: var(  --hover-color) ;
 }
